@@ -1,8 +1,31 @@
 {
   "presets": ["react-native"],
+  "plugins": ["transform-decorators-legacy",
+  ["module-resolver", {
+    "root": ["./App"],
+    "alias": {
+      "API": "Services/API",
+      "Components": "./Components",
+      "Containers": "./Containers",
+      "DevThemes": "Themes/DevThemes",
+      "I18n": "./I18n",
+      "Images": "Themes/Images",
+      "Lib": "./Lib",
+      "Navigation": "./Navigation",
+      "Redux": "./Redux",
+      "Sagas": "./Sagas",
+      "Screens": "./Screens",
+      "Services": "./Services",
+      "Themes": "./Themes",
+      "Transforms": "./Transforms"
+      }}
+  ]],
   "env": {
     "production": {
       "plugins": ["ignite-ignore-reactotron"]
+    },
+    "development": {
+      "plugins": ["transform-react-jsx-source"]
     }
   }
 }
